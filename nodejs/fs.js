@@ -6,7 +6,7 @@ var platform = myos.platform();
 
 console.log(userdata.username+ " uses "+ platform); 
 
-myfs.appendFile("mydata.txt","hello "+userdata.username,(error)=>{
+myfs.appendFile("mydata.txt","hello "+userdata.username,(error) => {
     if(error){
         throw error;
         console.log(error);
