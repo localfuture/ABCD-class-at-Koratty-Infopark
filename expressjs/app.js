@@ -11,6 +11,10 @@ app.get("/home", (req,res) => {
    res.render('home',{title:"ICTK Home Page"});
 });
 
+app.get("/contact", (req,res) => {
+    res.render('contact');
+ });
+
 app.listen(3000, () => {
     console.log("Server is up and running!");
 });
