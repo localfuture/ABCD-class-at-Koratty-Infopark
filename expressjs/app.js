@@ -1,12 +1,14 @@
 var Express = require('express');
 var app = Express();
 
+app.set('view engine','ejs');
+
 app.get("/", (req,res) => {
-    res.send("<h1>Welcome to my website!</h1>");
+    res.render('index',{title:"ICTK", name:["Anand","Abhinav","Vivek","Alwin","Dileep"]}); 
 });
 
 app.get("/home", (req,res) => {
-    res.send("<h1>Welcome to My Home Page!</h1>");
+   res.render('home',{title:"ICTK Home Page"});
 });
 
 app.listen(3000, () => {
